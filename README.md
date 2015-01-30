@@ -42,12 +42,13 @@ how to develope a bootstrap theme to wordpress theme
          Usually wordpress use index to show blog but if you don't see the blog to your home page you have to create a welcome template
          named template-welcome.php
 #step 10. 
+<?php
                then you have to create daynamic menu following the system
                 1. create functions.php
                 2. then create 'inc' folder to keep all function file 
                 3. and link to that file in functions.php file
                 create function in function.php which is in inc/menus.php
-<?php
+
                      function shahidul_theme_menus(){
                         register_nav_menus(array(
                             'header_menu'=>'This menu is going to header main menu',
@@ -76,9 +77,10 @@ how to develope a bootstrap theme to wordpress theme
                         }
 ?>
 #step 11. then do some simple work 
+<?php
                 1. for this you have to define the default theme support
                    like as
-<?php
+
                         add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat') );
                         add_theme_support( 'custom-background');
                         add_theme_support( 'custom-header' );
