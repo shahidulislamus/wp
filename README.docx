@@ -1,19 +1,13 @@
 how to develope a bootstrap theme to wordpress theme
 
-#step 1.
-             at first you have to over look all the markup of html 
-#step 2.
-             firstly you have to rename index.html to index.php 
-#step 3.
-            then you should daynamaic all static code
-            such as this code <?php
-                              |     lang="en"                    | =>          |   <?php language_attributes(); ?>                |
+step 1. at first you have to over look all the markup of html 
+step 2. firstly you have to rename index.html to index.php 
+step 3. then you should daynamaic all static code
+            such as this code |     lang="en"                    | =>          |   <?php language_attributes(); ?>                |
                               |     utf-8                        | =>          |   <?php bloginfo('charset'); ?>                  |
                               | middle of title tag              | =>          |  <?php wp_title('|', true, right); ?>            |
                               | to reach template directory      | =>          |  <?php echo get_template_directory_uri(); ?>     |
-                              ?>
-#step 4. 
-           create style.css file in root directory and write details of the theme
+step 4. create style.css file in root directory and write details of the theme
             such as
                    /* |don't use white spece after attribute name|
                        Theme Name  : moderna
@@ -29,27 +23,19 @@ how to develope a bootstrap theme to wordpress theme
                                      editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post,
                                       threaded-comments, translation-ready
                    */
-#step 5. 
-            create a screenshot.png (600*450) which is contain your theme home page.
-#step 6.
-             then check to sure that all contain are daynamic
-#step 7.
-             then write before end of head tag <?php wp_head(); ?> and write <?php wp_footer(); ?> before the end of body tag.
-#step 8.
-            then breake theme as header.php, footer.php and so on. and to get header.php you have to write <?php get_header(); ?> and 
+step 5. create a screenshot.png (600*450) which is contain your theme home page.
+step 6. then check to sure that all contain are daynamic
+step 7. then write before end of head tag <?php wp_head(); ?> and write <?php wp_footer(); ?> before the end of body tag.
+step 8. then breake theme as header.php, footer.php and so on. and to get header.php you have to write <?php get_header(); ?> and 
         <?php get_footer(); ?> to get footer.
-#step 9.
-         Usually wordpress use index to show blog but if you don't see the blog to your home page you have to create a welcome template
+step 9. Usually wordpress use index to show blog but if you don't see the blog to your home page you have to create a welcome template
          named template-welcome.php
-#step 10. 
-
-               then you have to create daynamic menu following the system
- <?ph           1. create functions.php
+step 10. then you have to create daynamic menu following the system
+                1. create functions.php
                 2. then create 'inc' folder to keep all function file 
                 3. and link to that file in functions.php file
                 create function in function.php which is in inc/menus.php
-
-                     function shahidul_theme_menus(){
+                    function shahidul_theme_menus(){
                         register_nav_menus(array(
                             'header_menu'=>'This menu is going to header main menu',
                             'footer_menu'=>'this menu is going to footer'
@@ -75,12 +61,10 @@ how to develope a bootstrap theme to wordpress theme
                             wp_list_pages('title_li=');
                             echo'</ul></div>';
                         }
-?>
-#step 11. then do some simple work 
-<?php
+
+step 11. then do some simple work 
                 1. for this you have to define the default theme support
                    like as
-
                         add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat') );
                         add_theme_support( 'custom-background');
                         add_theme_support( 'custom-header' );
@@ -99,10 +83,10 @@ how to develope a bootstrap theme to wordpress theme
                     custom image size name, width, height hardcrop t/f
                         add_image_size('slider_image', 1024, 360, true );
                         add_image_size('portfolio_image', 300, 200, true );
-?>
+
                     
-#step 12. then daynamic the slider such as
- <?php              
+step 12. then daynamic the slider such as
+               
                1. put this code in function php
                     function shahidul_custom_post_slider(){
                         register_post_type('slider_id',array(
@@ -145,10 +129,7 @@ how to develope a bootstrap theme to wordpress theme
                             }
                             add_filter( 'excerpt_length', 'custom_excerpt_length');
                 4. to use this control you have to use the_excerpt(excerpt_length);
-?>
-#step 13.
-<?php     
-           now you have to daynamic the promotion area
+step 13. now you have to daynamic the promotion area
                 1. so create a custom post for promotion area
                         function shahidul_custom_post_promotion(){
                             register_post_type('promotion_id',array(
@@ -197,4 +178,3 @@ how to develope a bootstrap theme to wordpress theme
                     </div>
 
                         <?php endforeach; ?>
-?>
