@@ -42,9 +42,9 @@ how to develope a bootstrap theme to wordpress theme
          Usually wordpress use index to show blog but if you don't see the blog to your home page you have to create a welcome template
          named template-welcome.php
 #step 10. 
-<?php
+
                then you have to create daynamic menu following the system
-                1. create functions.php
+ <?ph           1. create functions.php
                 2. then create 'inc' folder to keep all function file 
                 3. and link to that file in functions.php file
                 create function in function.php which is in inc/menus.php
@@ -101,8 +101,7 @@ how to develope a bootstrap theme to wordpress theme
                         add_image_size('portfolio_image', 300, 200, true );
 ?>
                     
-#step 12.
-               then daynamic the slider such as
+#step 12. then daynamic the slider such as
  <?php              
                1. put this code in function php
                     function shahidul_custom_post_slider(){
