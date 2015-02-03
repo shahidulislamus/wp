@@ -178,3 +178,4 @@ step 13. now you have to daynamic the promotion area
                     </div>
 
                         <?php endforeach; ?>
+```
