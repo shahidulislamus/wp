@@ -1,4 +1,4 @@
-how to develope a bootstrap theme to wordpress theme
+```how to develope a bootstrap theme to wordpress theme
 
 step 1. at first you have to over look all the markup of html 
 step 2. firstly you have to rename index.html to index.php 
