@@ -9,6 +9,6 @@ foreach( $myposts as $post ) : setup_postdata($post); ?>
     ?>
 
 	<h2><?php the_title(); ?></h2>
-	<?php the_content(); ?>
-	<p><?php echo $job_link; ?></p>
+	<?php the_content(); ?> 
+	<p><?php echo $job_link; ?></p> 
 <?php endforeach; ?>
